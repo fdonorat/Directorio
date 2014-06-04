@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript">
+		/*
+			This example shows how to set up PhotoSwipe using jQuery Mobile.
+		*//*
+		$(document).ready(function(){
+			$('div.gallery-page').on('pageshow', function(e){
+				// Re-initialize with the photos for the current page
+				$("div.gallery a", e.target).photoSwipe();
+				return true;
+			})
+		});*/
+</script>
+    </head>
+    
+    <body>    
+        
+        <div data-role="page" id="Gallery1" class="gallery-page">
+			<div data-role="header" data-add-back-btn="true" ><h1>Imágenes</h1></div>
+			<div data-role="content">
+
+                <div class="gallery" id="photos">
+                	
+                </div>
+            </div>
+            
+            <div data-role="footer"><h4>&copy; 2011 Code Computerlove</h4></div>
+            
+        </div>
+             
+    </body>
+</html>  

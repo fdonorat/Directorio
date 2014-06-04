@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Documento sin título</title>
+
+<link rel="stylesheet" href="js/lib/jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+<!--<link href="css/jquery.mobile-1.4.2.css" type="text/css" rel="stylesheet" />-->
+<!--<link href="css/styles.css" type="text/css" rel="stylesheet" />-->
+<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+		div.gallery-row:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+		div.gallery-item { float: left; width: 33.333333%; }
+		div.gallery-item a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+		div.gallery-item img { display: block; width: 100%; height: auto; }
+		#Gallery1 .ui-content { overflow: hidden; }
+	</style>
+
+<!--<script src="js/jquery-1.11.1.js"></script>
+<script src="js/jquery.mobile-1.4.2.js"></script>-->
+<script type="text/javascript" src="js/lib/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+<script type="text/javascript" src="js/lib/simple-inheritance.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.animate-enhanced.min.js"></script>
+<!--<script type="text/javascript" src="js/code-photoswipe-1.0.11.min.js"></script>-->
+<script type="text/javascript" src="js/code-photoswipe-jQuery-1.0.11.min.js"></script>
+<script type="text/javascript">
+		/*
+			This example shows how to set up PhotoSwipe using jQuery Mobile.
+		*/
+		$(document).ready(function(){
+			$('div.gallery-page').live('pageshow', function(e){
+				// Re-initialize with the photos for the current page
+				$("div.gallery a", e.target).photoSwipe();
+				return true;
+			})
+		});
+		/*
+		$(document).live('pageshow', '#Gallery1', function() {
+			console.log("Gallery1");
+			//var options = {};
+			$('#gall a').photoSwipe();
+			console.log("#photos");	
+		});*/
+		
+</script>
+
+</head>
+
+<body>
+
+<div data-role="page" id="Home">
+	<div data-role="header"><h1>Home</h1></div>
+	<div data-role="content">
+
+    <ul id="detallesList" data-role="listview" data-inset="false" data-dividertheme="a">
+    
+        <li data-role="list-divider">Categorías</li>
+        <li><a href="#Gallery1">Galería de imágenes</a></li>
+        <li data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false"><h2>Choose a car model...</h2>
+		</li>
+	</ul>
+    </div>
+</div>
+
+<div data-role="page" id="Gallery1" class="gallery-page">
+<div data-role="header" data-add-back-btn="true" ><h1>First Gallery</h1></div>
+<div data-role="content">
+
+<div class="gallery" id="photos">
+	<div class="gallery-row">
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image1.jpg" rel="external"><img src="imagenes/clientes/1/Image1.jpg" alt="Image 01" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image2.jpg" rel="external"><img src="imagenes/clientes/1/Image2.jpg" alt="Image 02" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image3.jpg" rel="external"><img src="imagenes/clientes/1/Image3.jpg" alt="Image 03" /></a></div>
+		<!--<div class="gallery-item"><a href="imagenes/clientes/1/Image1.jpg"><img src="imagenes/clientes/1/Image1.jpg" alt="Image 04" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image2.jpg"><img src="imagenes/clientes/1/Image2.jpg" alt="Image 05" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image3.jpg"><img src="imagenes/clientes/1/Image3.jpg" alt="Image 06" /></a></div>
+	</div>-->
+</div>
+<div class="gallery-row">
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image1.jpg" rel="external"><img src="imagenes/clientes/1/Image1.jpg" alt="Image 01" /></a></div>
+        </div>
+
+  </div>
+    <div data-role="footer">
+		<h4>&copy; 2011 Code Computerlove</h4>
+	</div>
+</div>
+
+<!--
+<div id="Header">
+	<a href="http://www.codecomputerlove.com"><img src="images/codecomputerlovelogo.gif" width="230" height="48" alt="Code Computerlove" /></a>
+</div>
+<div id="MainContent">
+	<div class="page-content">
+		<h1>PhotoSwipe</h1>
+	</div>
+	
+<div id="Gallery">
+	<div class="gallery-row">
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image1.jpg"><img src="imagenes/clientes/1/Image1.jpg" alt="Image 01" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image2.jpg"><img src="imagenes/clientes/1/Image2.jpg" alt="Image 02" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image3.jpg"><img src="imagenes/clientes/1/Image3.jpg" alt="Image 03" /></a></div>
+	</div>
+	<div class="gallery-row">
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image1.jpg"><img src="imagenes/clientes/1/Image1.jpg" alt="Image 04" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image2.jpg"><img src="imagenes/clientes/1/Image2.jpg" alt="Image 05" /></a></div>
+		<div class="gallery-item"><a href="imagenes/clientes/1/Image3.jpg"><img src="imagenes/clientes/1/Image3.jpg" alt="Image 06" /></a></div>
+	</div>
+</div>
+
+<div id="Footer">
+	<p><small>&copy; 2011 Code Computerlove Ltd - new media agency / digital marketing agency</small></p>
+	<div id="SocialLinks">
+	<a href="http://blog.codecomputerlove.com/"><img src="images/blogicon.png" width="32" height="32" alt="Blog" /></a>
+	<a href="http://www.twitter.com/computerlovers"><img src="images/twittericon.png" width="32" height="32" alt="Twitter" /></a>
+	<a href="http://www.facebook.com/CodeComputerlove"><img src="images/facebookicon.png" width="32" height="32" alt="Facebook" /></a>
+	<a href="http://www.flickr.com/photos/codecomputerlove"><img src="images/flickricon.png" width="32" height="32" alt="Flickr" /></a>
+</div>-->
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+App Directorio
+
+
+Negocio_detalle: Datos y recursos determinados del negocio
+- nombre
+- categorias
+- descripcion
+- direccion
+- telefonos
+- email
+- sitio web
+- redes
+- horarios
+- ubicacion
+- imagenes
+
+
+Categorias: Lista de las categorías para segmentar negocios
+- id
+- nombre
+- descripcion
+
+Negocio
+- id : serial
+- nombre : character varying
+- descripcion : character varying
+- direccion : character varying
+- email : character varying
+- web : character varying
+- map_lat : numeric(10,6)
+- map_lng : numeric(10,6)
+
+
+Negocio_telefonos
+- negocio_id : FK_Negocio
+- telefono : character varying
+
+Negocio_horarios
+- negocio_id : FK_Negocio
+- hora_entrada : timestamp
+- hora_salida : timestamp
+- dias : character varying
+
+Negocio_imagenes
+- negocio_id : FK_Negocio
+- url_img_or : character varying
+- url_thumbnail : character varying
+
+Negocio_redes
+- negocio_id : FK_Negocio
+- url_red : character varying
+- red_id : FK_Redes_sociales
+
+
+Redes_sociales
+- id
+- nombre
+
+Negocio_categorias
+- negocio_id : FK_Negocio
+- categorias_id : FK_Categorias

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Directorio</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+        <!--<script type="application/javascript" src="js/fastclick.js"></script>-->
+        <script type="application/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="application/javascript" src="js/bootstrap.js"></script>
+        <!--<script type="application/javascript" src="js/iscroll.js"></script>-->
+            <script type="application/javascript" src="js/main.js"></script>
+            <!--<script type="application/javascript" src="js/underscore.js"></script>-->
+            <!--<link href="css/style.css" type="text/css" rel="stylesheet" />
+            <script type="application/javascript" src="js/swipeview.js"></script>-->
+            <link href="css/swipebox.min.css" type="text/css" rel="stylesheet" />
+            <script type="application/javascript" src="js/jquery.swipebox.min.js"></script>
+    </head>
+    <body>    
+            <script type="text/javascript" src="phonegap.js"></script>
+        <div id="negociosListPage" data-role="page" >
+    
+            <div data-role="header" data-position="fixed">
+                <h1>Directorio</h1>
+                <a href="#" data-icon="gear" class="ui-btn-right">Opciones</a>
+                <div data-role="navbar" data-position="fixed">
+                	<ul>
+                    	<li><a href="#" data-icon="home" class="ui-btn-active"></a></li>
+                        <li><a href="#" data-icon="star"></a></li>
+                        <li><a href="#" data-icon="gear"></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button onClick="getNegocios();">Cargar</button>
+        
+            <div data-role="content">
+                 <ul id="negociosList" data-role="listview" data-filter="true" data-filter-placeholder="Filtrar resultados..."></ul>
+            </div>		
+        
+        </div>
+    
+    <script type="application/javascript" src="js/negocioDetalle.js"></script> 
+    <!--<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />-->
+<!--<style type="text/css">
+		div.gallery-row:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+		div.gallery-item { float: left; width: 33.333333%; }
+		div.gallery-item a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+		div.gallery-item img { display: block; width: 100%; height: auto; }
+		#Gallery1 .ui-content { overflow: hidden; }
+	</style>
+    <script type="text/javascript" src="js/lib/simple-inheritance.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.animate-enhanced.min.js"></script>
+<script type="text/javascript" src="js/code-photoswipe-1.0.11.js"></script>-->
+<script type="application/javascript" src="js/negocioGaleriaImagenes.js"></script>   
+    </body>
+</html>  
