@@ -1,6 +1,6 @@
 // JavaScript Document
 var contactos;
-var s_URL = "http://192.168.1.80:8080/WebApplication1/webresources";
+var s_URL = "http://localhost:8080/WebApplication1/webresources";
 $(document).ready(function(){
     //$("#getContactBtn").click(getContactList);
 	//$("#clearTableBtn").click(clearTable);
